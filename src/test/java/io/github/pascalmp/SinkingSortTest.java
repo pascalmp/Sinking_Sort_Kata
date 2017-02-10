@@ -10,9 +10,13 @@ public class SinkingSortTest {
 		assertArrayEquals(new int[]{0, 1}, SinkingSort.sort(new int[]{0, 1}));
 	}
 	@Test
-	public void shouldSortUnsortedList() throws Exception{
+	public void shouldSortUnsortedListOfLengthTwo() throws Exception{
 		assertArrayEquals(new int[]{0, 1}, SinkingSort.sort(new int[]{1, 0}));
 		
+	}
+	@Test
+	public void shouldSortPartiallySortedListOfLengthThree() throws Exception{
+		assertArrayEquals(new int[]{0, 1, 2}, SinkingSort.sort(new int[]{0, 2, 1}));
 	}
 	
 
