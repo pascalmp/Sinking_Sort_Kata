@@ -9,5 +9,11 @@ public class SinkingSortTest {
 	public void shouldSortSortedList(){
 		assertArrayEquals(new int[]{0, 1}, SinkingSort.sort(new int[]{0, 1}));
 	}
+	@Test
+	public void shouldSortUnsortedList() throws Exception{
+		assertArrayEquals(new int[]{0, 1}, SinkingSort.sort(new int[]{1, 0}));
+		
+	}
+	
 
 }
