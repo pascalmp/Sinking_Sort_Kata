@@ -1,6 +1,9 @@
-package io.github.pascalmp;
+package com.pascalmp;
 
 import org.junit.Test;
+
+import com.pascalmp.SinkingSort;
+
 import static org.junit.Assert.assertArrayEquals;
 
 public class SinkingSortTest {
@@ -15,8 +18,12 @@ public class SinkingSortTest {
 		
 	}
 	@Test
-	public void shouldSortPartiallySortedListOfLengthThree() throws Exception{
+	public void shouldSortPartiallySortedArrayListOfLengthThree() throws Exception{
 		assertArrayEquals(new int[]{0, 1, 2}, SinkingSort.sort(new int[]{0, 2, 1}));
+	}
+	@Test
+	public void shouldSortUnsortedArrayListOfLengthThree() throws Exception{
+		assertArrayEquals(new int[]{0, 1, 2}, SinkingSort.sort(new int[]{2, 1, 0}));
 	}
 	
 
